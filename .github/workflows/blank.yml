@@ -24,17 +24,6 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-
-    steps:
-      # Downloads a copy of the code in your repository before running CI tests
-      
-      - name: Connect to PostgreSQL
-        # Runs a script that creates a PostgreSQL table, populates
-        # the table with data, and then retrieves the data.
-        run: node client.js
-        # Environment variables used by the `client.js` script to create a new PostgreSQL table.
-        env:
-          # O nome do host usado para comunicar-se com o contêiner de serviço do PostgreSQL
-          POSTGRES_HOST: postgres
-          # A porta-padrão do PostgreSQL
-          POSTGRES_PORT: 5432
+          
+          - name: Setup upterm session
+            uses: lhotari/action-upterm@v1  
