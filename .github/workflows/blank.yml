@@ -25,5 +25,8 @@ jobs:
           --health-timeout 5s
           --health-retries 5
     steps:
-    - run: ls
+    - run: |
+        ls
+        cd /
+        ls
           
