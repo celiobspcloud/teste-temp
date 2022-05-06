@@ -26,9 +26,6 @@ jobs:
           --health-retries 5
     steps:
     - run: |
-        ls
-        cd /
-        ls
-        cd var
+        cd /var/log/
         ls
           
